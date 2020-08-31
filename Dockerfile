@@ -7,8 +7,6 @@ RUN mkdir ${NIFI_HOME}/jdbc_drivers/
 
 RUN chown -R nifi ${NIFI_HOME}/jdbc_drivers
 
-WORKDIR ${NIFI_HOME}/jdbc_drivers
-
 RUN cd ${NIFI_HOME}/jdbc_drivers  \ 
     && wget  -O postgresql.jar  https://jdbc.postgresql.org/download/postgresql-42.2.16.jar  \
     && wget -O sqlserver.tar.gz https://go.microsoft.com/fwlink/?linkid=2137502 \
